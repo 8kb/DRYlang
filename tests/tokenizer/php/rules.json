@@ -1,0 +1,18 @@
+{
+    "defaultType":"token",
+    "specialTokens": [
+        " ", "  ", "   ", "    ", "\n", "\r", "\t",
+        "<?",
+        "{", "}", "(", ")", "[", "]",
+        "=", "==", "!=", ">=", "<=", ">", "<",
+        "=>", "::", "!", ";", ",", ".", "->",
+        "+", "-", "*", "/",
+        "$", "\\", "&"
+    ],
+    "quotedRules": [
+        {"type":"singlQuotedString","startBy":"'", "endBy":"'", "escSubTokens":["\\\"", "\\\\"]},
+        {"type":"dobleQuotedString", "startBy":"\"", "endBy":"\"", "escSubTokens":["\\\"", "\\\\"]},
+        {"type":"remarkString","startBy":"//", "endBy":"\n", "escSubTokens":[]},
+        {"type":"remarkBlock","startBy":"/*", "endBy":"*/", "escSubTokens":[]}
+    ]
+}

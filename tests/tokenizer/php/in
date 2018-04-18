@@ -1,0 +1,64 @@
+<?php
+namespace tokenizer;
+
+/**
+ * Quoted tokenizer
+ *
+ * @author Mendel
+ */
+class QuotedTokenizer extends SpecialTokenizer
+{
+    /**
+     * Rules describe quoted tokens (like string, comments etc, see example)
+     * @var array
+     */
+    private $quotedRules = [];
+
+    /**
+     * Configurate tokenizer
+     *
+     * @param array $config
+     */
+    public function configurate(array $config)
+    {
+        $this->quotedRules = $config['quotedRules'];
+        // Add startBy (first chars) at list of special token, for prevention
+        // of premature termination of token
+        // @see specialSymbol()
+        foreach ($this->quotedRules as $rule) {
+            $config['specialTokens'][] = $rule['startBy'];
+        }
+        parent::configurate($config);
+    }
+    
+    /**
+     * Processing special symbol
+     *
+     * @throws \WrongTokenException
+     */
+    protected function specialSymbol()
+    {
+        parent::specialSymbol();
+        foreach ($this->quotedRules as $rule) {
+            if ($this->current->startBy($rule['startBy'])) {
+                $this->current->reset(); // delete open chars
+                $this->quotedLoopStep($rule);
+                $this->current->deleteEnd($rule['endBy']); // delete close chars
+                $this->finishToken($rule['type']);
+            }
+        }
+    }
+    
+    /**
+     * Add all chars while token not ended
+     *
+     * @param array $rule current rule
+     */
+    private function quotedLoopStep(array $rule)
+    {
+        do {
+            $this->push();
+            $this->input->next();
+        } while (!$this->current->escEndBy($rule['endBy'], $rule['escSubTokens']));
+    }
+}

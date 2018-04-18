@@ -1,0 +1,4 @@
+// The name of our "object"
+Title = "Some kind of \" object \"",
+// A detailed description of the "object"
+Description = "A detailed description of what we want ..."

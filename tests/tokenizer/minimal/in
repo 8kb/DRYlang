@@ -1,0 +1,17 @@
+// Name of our object
+Title = "An object",
+// Detailed description of the object
+Description = "A detailed description of what we want ..."
+// Nested associative array of parameters
+Additional parameters = {
+     First parameter = 3, // the values can be either text or numbers
+     Second parameter = First parameter,
+     Third parameter = "Some text", // Possible "hanging" comma
+},
+// A nested array of properties, without keys, just an enumeration
+Property list = {
+     Big,
+     Wide,
+     Clever,
+     Difficult to maintain
+}
