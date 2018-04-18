@@ -3,7 +3,7 @@
  * @copyright (c) 2017 Mendel <mendel@zzzlab.com>
  * @license see license.txt
  */
-namespace tests\tokenizer;
+namespace tokenizer\tests;
 
 /**
  * Test Tokenizer
@@ -17,9 +17,9 @@ class TokenizerTest extends \PHPUnit\Framework\TestCase
      */
     public function testMinimal()
     {
-        $ruleFilename = HOME.'/tests/tokenizer/minimal/rules.json';
-        $inputFilename = HOME.'/tests/tokenizer/minimal/in';
-        $outFilename = HOME.'/tests/tokenizer/minimal/out';
+        $ruleFilename = HOME.'/tokenizer/tests/minimal/rules.json';
+        $inputFilename = HOME.'/tokenizer/tests/minimal/in';
+        $outFilename = HOME.'/tokenizer/tests/minimal/out';
         $sourceName = 'sample.minimal';
         //
         $result = $this->tokenize($ruleFilename, $inputFilename, $sourceName);
@@ -32,9 +32,9 @@ class TokenizerTest extends \PHPUnit\Framework\TestCase
      */
     public function testQuoted()
     {
-        $ruleFilename = HOME.'/tests/tokenizer/quoted/rules.json';
-        $inputFilename = HOME.'/tests/tokenizer/quoted/in';
-        $outFilename = HOME.'/tests/tokenizer/quoted/out';
+        $ruleFilename = HOME.'/tokenizer/tests/quoted/rules.json';
+        $inputFilename = HOME.'/tokenizer/tests/quoted/in';
+        $outFilename = HOME.'/tokenizer/tests/quoted/out';
         $sourceName = 'sample.quoted';
         //
         $result = $this->tokenize($ruleFilename, $inputFilename, $sourceName);
@@ -47,9 +47,9 @@ class TokenizerTest extends \PHPUnit\Framework\TestCase
      */
     public function testPhp()
     {
-        $ruleFilename = HOME.'/tests/tokenizer/php/rules.json';
-        $inputFilename = HOME.'/tests/tokenizer/php/in';
-        $outFilename = HOME.'/tests/tokenizer/php/out';
+        $ruleFilename = HOME.'/tokenizer/tests/php/rules.json';
+        $inputFilename = HOME.'/tokenizer/tests/php/in';
+        $outFilename = HOME.'/tokenizer/tests/php/out';
         $sourceName = 'sample.php';
         //
         $result = $this->tokenize($ruleFilename, $inputFilename, $sourceName);

@@ -10,7 +10,7 @@ namespace tokenizer;
  *
  * @author Mendel
  */
-class ExtendedTokenizer extends MetadataTokenizer implements \contract\ExtendedTokenizerInterface
+class ExtendedTokenizer extends MetadataTokenizer implements ExtendedTokenizerInterface
 {
     /**
      * Configurate tokenizer from JSON-file

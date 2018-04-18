@@ -1,10 +1,10 @@
 <phpunit bootstrap="bootstrap.php">
   <testsuites>
     <testsuite name="buffer">
-      <directory>tests/buffer</directory>
+      <directory>buffer/tests</directory>
     </testsuite>
     <testsuite name="tokenizer">
-      <directory>tests/tokenizer</directory>
+      <directory>tokenizer/tests</directory>
     </testsuite>
   </testsuites>
 </phpunit>

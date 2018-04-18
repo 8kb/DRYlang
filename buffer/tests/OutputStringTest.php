@@ -3,17 +3,17 @@
  * @copyright (c) 2017 Mendel <mendel@zzzlab.com>
  * @license see license.txt
  */
-namespace tests\buffer;
+namespace buffer\tests;
 
 /**
- * Test OutputArray
+ * Test OutputString
  *
  * @author Mendel
  */
-class OutputArrayTest extends \PHPUnit\Framework\TestCase
+class OutputStringTest extends \PHPUnit\Framework\TestCase
 {
     /**
-     * @var \buffer\OutputArray
+     * @var \buffer\OutputString
      */
     protected $buffer;
 
@@ -22,7 +22,7 @@ class OutputArrayTest extends \PHPUnit\Framework\TestCase
      */
     public function setUp()
     {
-        $this->buffer = new \buffer\OutputArray();
+        $this->buffer = new \buffer\OutputString();
     }
 
     /**
@@ -34,12 +34,12 @@ class OutputArrayTest extends \PHPUnit\Framework\TestCase
     }
     
     /**
-     * Test push
+     * Test push data
      */
     public function testPushData()
     {
         $this->pushArray(['q', 'w', 'e', 'r', "\n", 't', 'y']);
-        $this->assertEquals($this->buffer->data(), ['q', 'w', 'e', 'r', "\n", 't', 'y']);
+        $this->assertEquals($this->buffer->data(), "qwer\nty");
     }
 
     /**
@@ -50,11 +50,12 @@ class OutputArrayTest extends \PHPUnit\Framework\TestCase
         $this->pushArray(['q', 'w', 'e', 'r', 't', 'y']);
         $this->buffer->reset();
         $this->pushArray(['q', 'w', 'e', 'r', "\n", 't', 'y']);
-        $this->assertEquals($this->buffer->data(), ['q', 'w', 'e', 'r', "\n", 't', 'y']);
+        $this->assertEquals($this->buffer->data(), "qwer\nty");
     }
     
     /**
-     * Internal function for add array
+     * Internal function for add array to buffer
+     * в тестируемый буффер
      * @param array $arr
      */
     protected function pushArray($arr)

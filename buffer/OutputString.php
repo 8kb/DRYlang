@@ -8,7 +8,7 @@ namespace buffer;
 /**
  * Output buffer (string)
  **/
-class OutputString implements \contract\OutputInterface
+class OutputString implements OutputInterface
 {
     /**
      * @var string Internal storage

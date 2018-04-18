@@ -4,8 +4,8 @@
  */
 require_once 'bootstrap.php';
 //
-$ruleFilename = HOME.'/tests/tokenizer/quoted/rules.json';
-$inputFilename = HOME.'/tests/tokenizer/quoted/in';
+$ruleFilename = HOME.'/tokenizer/tests/quoted/rules.json';
+$inputFilename = HOME.'/tokenizer/tests/quoted/in';
 $sourceName = 'sample.quoted';
 //
 $tokenizer = new \tokenizer\Tokenizer();

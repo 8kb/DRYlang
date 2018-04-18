@@ -8,7 +8,7 @@ namespace buffer;
 /**
  * Output buffer (array)
  **/
-class OutputArray implements \contract\OutputInterface
+class OutputArray implements OutputInterface
 {
     /**
      * @var array internal storage

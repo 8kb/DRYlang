@@ -3,7 +3,7 @@
  * @copyright (c) 2017 Mendel <mendel@zzzlab.com>
  * @license see license.txt
  */
-namespace contract;
+namespace tokenizer;
 
 /**
  * Basic tokenizer interface

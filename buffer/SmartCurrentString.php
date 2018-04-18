@@ -36,7 +36,7 @@ class SmartCurrentString extends CurrentString
     }
     
     /**
-     * Get count of $tokens started by $needle 
+     * Get count of $tokens started by $needle
      *
      * @param string $needle
      * @param array $tokens
@@ -73,7 +73,7 @@ class SmartCurrentString extends CurrentString
     /**
      * Get end of string after last escape string (from array of escTokens)
      * (public for test case)
-     * 
+     *
      * @param array $escSubTokens
      * @return string
      */

@@ -8,7 +8,7 @@ namespace buffer;
 /**
  * Input buffer (array)
  **/
-class InputArray implements \contract\InputInterface
+class InputArray implements InputInterface
 {
     /**
      * @var array internal storage

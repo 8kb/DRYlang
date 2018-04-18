@@ -3,26 +3,26 @@
  * @copyright (c) 2017 Mendel <mendel@zzzlab.com>
  * @license see license.txt
  */
-namespace tests\buffer;
+namespace buffer\tests;
 
 /**
- * Test InputString
+ * Test InputArray
  *
  * @author Mendel
  */
-class InputStringTest extends \PHPUnit\Framework\TestCase
+class InputArrayTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * Test all functionality
      */
     public function testAll()
     {
-        $input = new \buffer\InputString("qwe\nrty");
+        $input = new \buffer\InputArray(['q', 'w', 'e', 'r', 't', 'y']);
         $out = [];
         while (!$input->isEmpty()) {
             $out[] = $input->current();
             $input->next();
         }
-        $this->assertEquals($out, ['q', 'w', 'e', "\n", 'r', 't', 'y']);
+        $this->assertEquals($out, ['q', 'w', 'e', 'r', 't', 'y']);
     }
 }

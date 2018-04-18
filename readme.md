@@ -45,12 +45,14 @@ Tokens are of three types:
    which is contained between the opening and closing symbols.
 
 Usage example:
+```php
     $tokenizer = new \tokenizer\Tokenizer();
     $tokenizer->configurateByFile($ruleFilename);
     //
     $tokens = $tokenizer->tokenizeFile($inputFilename, $sourceName);
-
+```
 Configuration example:
+```json
 {
     "defaultType":"token",
     "specialTokens": [
@@ -69,7 +71,7 @@ Configuration example:
         {"type":"remarkBlock","startBy":"/*", "endBy":"*/", "escSubTokens":[]}
     ]
 }
-
+```
 
 2DO:
 -----

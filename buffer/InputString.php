@@ -8,7 +8,7 @@ namespace buffer;
 /**
  * Input buffer (string)
  **/
-class InputString implements \contract\InputInterface
+class InputString implements InputInterface
 {
     /**
      * @var string Internal storage

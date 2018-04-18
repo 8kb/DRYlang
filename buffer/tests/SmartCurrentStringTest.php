@@ -3,7 +3,7 @@
  * @copyright (c) 2017 Mendel <mendel@zzzlab.com>
  * @license see license.txt
  */
-namespace tests\buffer;
+namespace buffer\tests;
 
 /**
  * Test SmartCurrentString

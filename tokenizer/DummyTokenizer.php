@@ -12,7 +12,7 @@ namespace tokenizer;
  *
  * @author Mendel
  */
-class DummyTokenizer implements \contract\BasicTokenizerInterface
+class DummyTokenizer implements BasicTokenizerInterface
 {
     /**
      * @var \buffer\SmartInputString input buffer
