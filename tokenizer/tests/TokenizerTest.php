@@ -17,9 +17,9 @@ class TokenizerTest extends \PHPUnit\Framework\TestCase
      */
     public function testMinimal()
     {
-        $ruleFilename = HOME.'/tokenizer/tests/minimal/rules.json';
-        $inputFilename = HOME.'/tokenizer/tests/minimal/in';
-        $outFilename = HOME.'/tokenizer/tests/minimal/out';
+        $ruleFilename = HOME.'/samples/minimal/rules.json';
+        $inputFilename = HOME.'/samples/minimal/in';
+        $outFilename = HOME.'/samples/minimal/out';
         $sourceName = 'sample.minimal';
         //
         $result = $this->tokenize($ruleFilename, $inputFilename, $sourceName);
@@ -32,9 +32,9 @@ class TokenizerTest extends \PHPUnit\Framework\TestCase
      */
     public function testQuoted()
     {
-        $ruleFilename = HOME.'/tokenizer/tests/quoted/rules.json';
-        $inputFilename = HOME.'/tokenizer/tests/quoted/in';
-        $outFilename = HOME.'/tokenizer/tests/quoted/out';
+        $ruleFilename = HOME.'/samples/quoted/rules.json';
+        $inputFilename = HOME.'/samples/quoted/in';
+        $outFilename = HOME.'/samples/quoted/out';
         $sourceName = 'sample.quoted';
         //
         $result = $this->tokenize($ruleFilename, $inputFilename, $sourceName);
@@ -47,9 +47,9 @@ class TokenizerTest extends \PHPUnit\Framework\TestCase
      */
     public function testPhp()
     {
-        $ruleFilename = HOME.'/tokenizer/tests/php/rules.json';
-        $inputFilename = HOME.'/tokenizer/tests/php/in';
-        $outFilename = HOME.'/tokenizer/tests/php/out';
+        $ruleFilename = HOME.'/samples/php/rules.json';
+        $inputFilename = HOME.'/samples/php/in';
+        $outFilename = HOME.'/samples/php/out';
         $sourceName = 'sample.php';
         //
         $result = $this->tokenize($ruleFilename, $inputFilename, $sourceName);
