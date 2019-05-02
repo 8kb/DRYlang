@@ -1,4 +1,8 @@
-<phpunit bootstrap="bootstrap.php">
+<phpunit bootstrap="bootstrap.php"
+    convertErrorsToExceptions="true"
+    convertNoticesToExceptions="true"
+    convertWarningsToExceptions="true"
+    stopOnFailure="false">
   <testsuites>
     <testsuite name="buffer">
       <directory>buffer/tests</directory>
@@ -7,4 +11,10 @@
       <directory>tokenizer/tests</directory>
     </testsuite>
   </testsuites>
+  <filter>
+    <whitelist>
+      <directory>buffer</directory>
+      <directory>tokenizer</directory>
+    </whitelist>
+  </filter>
 </phpunit>

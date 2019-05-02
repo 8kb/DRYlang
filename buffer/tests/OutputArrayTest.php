@@ -20,7 +20,7 @@ class OutputArrayTest extends \PHPUnit\Framework\TestCase
     /**
      * SetUp
      */
-    public function setUp()
+    public function setUp() : void
     {
         $this->buffer = new \buffer\OutputArray();
     }
@@ -28,7 +28,7 @@ class OutputArrayTest extends \PHPUnit\Framework\TestCase
     /**
      * Destroy
      */
-    public function tearDown()
+    public function tearDown() : void
     {
         $this->buffer = null;
     }

@@ -20,7 +20,7 @@ class CurrentStringTest extends \PHPUnit\Framework\TestCase
     /**
      * SetUp
      */
-    public function setUp()
+    public function setUp() : void
     {
         $this->buffer = new \buffer\CurrentString();
         $arr = ['q', 'w', 'e', 'r', 't', 'y', "\n", 'u', 'i', 'o', 'p'];
@@ -32,7 +32,7 @@ class CurrentStringTest extends \PHPUnit\Framework\TestCase
     /**
      * Destroy
      */
-    public function tearDown()
+    public function tearDown() : void
     {
         $this->buffer = null;
     }
