@@ -55,7 +55,7 @@ Configuration example:
 ```json
 {
     "defaultType":"token",
-    "specialTokens": [
+    "specialTokens": {
         "separator": [
             " ", "\n", "\r", "\t"
         ],
@@ -69,7 +69,7 @@ Configuration example:
             "+", "-", "*", "/",
             "$", "\\", "&"
         ]
-    ],
+    },
     "quotedRules": [
         {"type":"singlQuotedString","startBy":"'", "endBy":"'", "escSubTokens":["\\\"", "\\\\"]},
         {"type":"dobleQuotedString", "startBy":"\"", "endBy":"\"", "escSubTokens":["\\\"", "\\\\"]},
