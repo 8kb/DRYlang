@@ -21,6 +21,11 @@ class SpecialTokenizer extends ExtendedTokenizer
      * @var array Special chars list
      */
     private $specialSymbols = [];
+    
+    /**
+     * @var array contain token=>type map
+     */
+    private $specialTokensMap = [];
 
     /**
      * Configurate tokenizer
@@ -29,9 +34,27 @@ class SpecialTokenizer extends ExtendedTokenizer
      */
     public function configurate(array $config)
     {
-        $this->specialTokens  = $config['specialTokens'];
+        $this->specialTokensMap = $this->prepareTokensMap($config['specialTokens']);
+        // Tokens lisk is a key list
+        $this->specialTokens  = array_keys($this->specialTokensMap);
         $this->specialSymbols = $this->tokens2chars($this->specialTokens);
         parent::configurate($config);
+    }
+    
+    /**
+     * Convert tokens config to token=>type map
+     * @param array $config
+     * @return array
+     */
+    private function prepareTokensMap(array $config) : array
+    {
+        $map = [];
+        foreach($config as $type=>$group) {
+            foreach($group as $token) {
+                $map[$token] = $type;
+            }
+        }
+        return $map;
     }
 
     /**
@@ -105,6 +128,12 @@ class SpecialTokenizer extends ExtendedTokenizer
         $this->push();
         $this->input->next();
     }
+    
+    
+    private function specialTokenType(string $value) : string
+    {
+        return $this->specialTokensMap[$value] ?? $this->defaultType;
+    }
 
     /**
      * Finish special token
@@ -117,6 +146,6 @@ class SpecialTokenizer extends ExtendedTokenizer
         if (!$this->current->isEmpty() and !in_array($this->current->data(), $this->specialTokens)) {
             throw new WrongTokenException($this->currentToken('badToken'));
         }
-        $this->finishToken($this->defaultType);
+        $this->finishToken($this->specialTokenType($this->current->data()));
     }
 }

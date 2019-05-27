@@ -30,7 +30,7 @@ class QuotedTokenizer extends SpecialTokenizer
         // of premature termination of token
         // @see specialSymbol()
         foreach ($this->quotedRules as $rule) {
-            $config['specialTokens'][] = $rule['startBy'];
+            $config['specialTokens']['____'][] = $rule['startBy'];
         }
         parent::configurate($config);
     }

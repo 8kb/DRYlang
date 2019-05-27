@@ -1,9 +1,13 @@
 {
     "defaultType":"token",
-    "specialTokens": [
-        " ", "\n", "\r", "\t",
-        "{", "}", "=", ","
-    ],
+    "specialTokens": {
+        "separator": [
+            " ", "\n", "\r", "\t"
+        ],
+        "other": [
+            "{", "}", "=", ","
+        ]
+    },
     "quotedRules": [
         {"type":"dobleQuotedString", "startBy":"\"", "endBy":"\"", "escSubTokens":["\\\"", "\\\\"]},
         {"type":"remarkString","startBy":"//", "endBy":"\n", "escSubTokens":[]}
