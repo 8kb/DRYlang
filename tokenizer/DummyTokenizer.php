@@ -6,9 +6,8 @@
 namespace tokenizer;
 
 /**
- * Абстрактный скелет токенайзера
- * содержит весь сервисный код
- * расширяется основной логикой разбора по токенам
+ * Minimal "dummy" tokenizer - contain main service logic
+ * will be overiden for real logic
  *
  * @author Mendel
  */

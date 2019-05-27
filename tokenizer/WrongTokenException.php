@@ -6,7 +6,7 @@
 namespace tokenizer;
 
 /**
- * Исключение бросаемое при неправильном токене
+ * Excepion for wrong token
  *
  * @author Mendel
  */

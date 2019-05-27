@@ -6,8 +6,8 @@
 namespace tokenizer;
 
 /**
- * Расширяем минимальный токенайзер функциями логинга
- * текущего курсора в входящей очереди и источника входных данных
+ * Extend dummy for store current string position
+ * for logging purpose, source
  *
  * @author Mendel
  */
